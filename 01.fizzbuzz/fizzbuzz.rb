@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 for i in 1..20 do
            if i % 15 == 0
              puts "FizzBuzz"
