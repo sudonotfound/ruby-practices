@@ -1,3 +1,15 @@
+# コマンドライン引数からカンマ区切りの文字列を取得
+if ARGV.empty?
+  puts "引数を指定してください。"
+  exit
+end
+
+# 引数をカンマで分割
+values = ARGV[0].split(',')
+
+# 結果を表示
+puts "受け取った値: #{values.inspect}"
+=begin
 #!/usr/bin/env ruby
 
 # コマンドライン引数を取得
@@ -59,3 +71,4 @@ end
 
   
     
+=end
