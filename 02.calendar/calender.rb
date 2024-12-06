@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 require 'date'
 require 'optparse'
-=begin
-optparseはコマンドラインで引数を用いるために利用する
-=end
+
 # コマンドライン引数の処理
 options = {}
 OptionParser.new do |opt|
@@ -35,5 +33,6 @@ print "   " * first_day.wday
 # 日付を表示
 (first_day..last_day).each do |date|
   printf("%2d ", date.day)
-  puts if date.saturday? #date.saturday? が true（つまり、土曜日）であれば改行を入れます。これにより、土曜日の後に改行し、次の行に移動して表示を続けます。
+  puts if date.saturday?
+#date.saturday? が true（つまり、土曜日）であれば改行を入れる。(土曜日の後に改行し、次の行に移動して表示を続ける。)
 end
