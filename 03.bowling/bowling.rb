@@ -1,3 +1,5 @@
+require 'date'
+require 'optparse'
 =begin
 # コマンドライン引数からカンマ区切りの文字列を取得
 if ARGV.empty?
