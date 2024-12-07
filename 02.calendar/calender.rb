@@ -2,8 +2,16 @@
 require 'date'
 require 'optparse'
 
+#現在の日付を取得
+current_date = Date.today
+
+
 # コマンドライン引数の処理
-options = {}
+options = {
+ year: current_date.year,
+ month: current_date.month
+}
+
 OptionParser.new do |opt|
   opt.on('-y YEAR', '--year YEAR', 'Year (e.g., 2020)') { |o| options[:year] = o.to_i }
   opt.on('-m MONTH', '--month MONTH', 'Month (e.g., 11)') { |o| options[:month] = o.to_i }
